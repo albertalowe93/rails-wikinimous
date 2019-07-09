@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+  <%= link_to "Wikinimous", articles_path, class: 'navbar-brand' %>
+  <%= link_to "New Article", new_article_path %>
+</nav>
+
+<div class="container">
+  <div>
+    <h3><%= @article.title %></h3>
+    <%= link_to "", edit_article_path(@article), class: "fas fa-edit" %>
+    <%= link_to "", article_path(@article), class: "far fa-trash-alt", method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+  <p><%= @article.content %></p>
+</div>
